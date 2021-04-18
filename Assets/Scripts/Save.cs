@@ -1,26 +1,24 @@
 using System.Collections;
-using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class Save : MonoBehaviour
 {
 
     public Texture2D[] tattooDesigns;
-    public Texture2D tattooDesign;
+    [HideInInspector]public Texture2D tattooDesign;
 
     public RenderTexture tattooTexture;
-    private int correctPixels;
-    public int totalCorrectPixels;
-    public int incorrectPixels;
+    private float correctPixels;
+    public float totalCorrectPixels;
+    public float incorrectPixels;
     public GameObject youWinText;
     public GameObject youLoseText;
     public GameObject tryAgainButton;
-    public int passingAmount = 3500;
-    public int failingAmount = 15000;
-    public int coloredPixels;
+    public float passingAmount = 3500;
+    public float coloredPixels;
     public Color targetColor;
+    [SerializeField] PixelCounter pixelCounter;
 
     public void SaveTexture()
     {
@@ -40,9 +38,8 @@ public class Save : MonoBehaviour
         File.WriteAllBytes(Application.dataPath + "/saveImage.png", data);
         
         CompareTexture(playerTattooTexture, tattooDesign);
-        Debug.Log(totalCorrectPixels);
-        Debug.Log(incorrectPixels);
-        if (totalCorrectPixels >= passingAmount && incorrectPixels < failingAmount)
+        var percentValue = (totalCorrectPixels / pixelCounter.totalPixels) * 100;
+        if (percentValue > 70)
         {
             youLoseText.SetActive(false);
             youWinText.SetActive(true);
@@ -57,11 +54,10 @@ public class Save : MonoBehaviour
 
     }
 
-    private int CompareTexture(Texture2D first, Texture2D second)
+    private void CompareTexture(Texture2D first, Texture2D second)
     {
         Color[] firstPix = first.GetPixels();
         Color[] secondPix = second.GetPixels();
-        Debug.Log(secondPix.Length);
 
         for (int i = 0; i < firstPix.Length; i++)
         {
@@ -83,7 +79,7 @@ public class Save : MonoBehaviour
             }
         }
 
-        return totalCorrectPixels = correctPixels;
+        totalCorrectPixels = correctPixels;
     }
 
     [ContextMenu("MapPixels")]
@@ -103,4 +99,5 @@ public class Save : MonoBehaviour
     {
         tattooDesign = tattooDesigns[designNum];
     }
+
 }

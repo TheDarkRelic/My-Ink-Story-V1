@@ -67,6 +67,8 @@
     <Compile Include="Assets\Scripts\Raycasting.cs" />
     <Compile Include="Assets\Scripts\ColorChanger.cs" />
     <Compile Include="Assets\Scripts\Save.cs" />
+    <Compile Include="Assets\Scripts\MayoTrayUI.cs" />
+    <Compile Include="Assets\Scripts\PixelCounter.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
