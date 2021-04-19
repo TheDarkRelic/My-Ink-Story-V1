@@ -7,6 +7,7 @@ public class MayoTrayUI : MonoBehaviour
     [SerializeField] Canvas trayCanvas;
     [SerializeField] GameObject machineObject;
     [SerializeField] Machine machine;
+    [SerializeField] MachineCrosshair machineCrosshair;
 
     private void Update()
     {
@@ -24,6 +25,7 @@ public class MayoTrayUI : MonoBehaviour
 
     private void PutAwayTray()
     {
+        machineCrosshair.ToggleCursor(true);
         Cursor.visible = false;
         machine.enabled = true;
         trayCanvas.enabled = false;
@@ -32,6 +34,7 @@ public class MayoTrayUI : MonoBehaviour
 
     public void PullOutTray()
     {
+        machineCrosshair.ToggleCursor(false);
         Cursor.visible = true;
         machine.enabled = false;
         machineObject.transform.DOMove(machineIdol.position, .5f);

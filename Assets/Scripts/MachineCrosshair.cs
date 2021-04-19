@@ -12,4 +12,20 @@ public class MachineCrosshair : MonoBehaviour
         var pos = raycasting.hit.point;
         transform.position = new Vector3(pos.x, pos.y, crosshairYOffset);
     }
+
+    public void ToggleCursor(bool isActive)
+    {
+        var spriterenderers = GetComponentsInChildren<SpriteRenderer>();
+        foreach (var cursorSprite in spriterenderers)
+        {
+            if (cursorSprite.enabled)
+            {
+                cursorSprite.enabled = isActive;
+            }
+            else
+            {
+                cursorSprite.enabled = isActive;
+            }
+        }
+    }
 }
