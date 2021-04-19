@@ -11,6 +11,7 @@ public class Machine : MonoBehaviour
     [SerializeField] GameObject ink;
     [SerializeField] Transform inkParent;
     bool strokeReady;
+    [SerializeField] float smoothing = .2f;
 
     private void Start()
     {
@@ -33,7 +34,7 @@ public class Machine : MonoBehaviour
         }
         else
         {
-            transform.DOMove(raycasting.hit.point + (Vector3.up * raycasting.machineHieght) + (-Vector3.forward * 2), .2f);
+            transform.DOMove(raycasting.hit.point + (Vector3.up * raycasting.machineHieght) + (-Vector3.forward * 2), smoothing);
             animator.SetBool("Running", false);
         }
         

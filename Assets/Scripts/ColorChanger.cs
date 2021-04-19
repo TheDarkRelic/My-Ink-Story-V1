@@ -10,16 +10,29 @@ public class ColorChanger : MonoBehaviour
         ink.newColor = Color.red;
         ink.sprite.sortingOrder = 6;
     }
+
+    public void ChangeColorPink()
+    {
+        ink.newColor = new Color32(254, 127, 195, 255);
+        ink.sprite.sortingOrder = 7;
+    }
+
     public void ChangeColorBlack()
     {
         ink.newColor = Color.black;
-        ink.sprite.sortingOrder = 9;
+        ink.sprite.sortingOrder = 10;
     }
 
     public void ChangeColorBlue()
     {
-        ink.newColor = Color.blue;
-        ink.sprite.sortingOrder = 8;
+        ink.newColor = new Color32(16, 206, 255, 255);
+        ink.sprite.sortingOrder = 7;
+    }
+
+    public void ChangeColorLightBlue()
+    {
+        ink.newColor = new Color32(148, 233, 255, 255);
+        ink.sprite.sortingOrder = 6;
     }
 
     public void ChangeColorYellow()
@@ -44,6 +57,18 @@ public class ColorChanger : MonoBehaviour
     {
         ink.newColor = new Color32(255, 84, 0, 255);
         ink.sprite.sortingOrder = 5;
+    }
+
+    public void ChangeColorDarkGray()
+    {
+        ink.newColor = new Color32(128, 127, 128, 255);
+        ink.sprite.sortingOrder = 9;
+    }
+
+    public void ChangeColorPurple()
+    {
+        ink.newColor = new Color32(127, 0, 255, 255);
+        ink.sprite.sortingOrder = 8;
     }
 
 }

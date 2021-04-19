@@ -3,7 +3,6 @@ using DG.Tweening;
 
 public class MayoTrayUI : MonoBehaviour
 {
-    private const bool V = true;
     [SerializeField] Transform trayIn, trayOut, machineIdol;
     [SerializeField] Canvas trayCanvas;
     [SerializeField] GameObject machineObject;
@@ -14,22 +13,34 @@ public class MayoTrayUI : MonoBehaviour
         if (!Input.GetKeyDown(KeyCode.T)) { return; }
         if (transform.position != trayOut.position)
         {
-            machine.enabled = false;
-            machineObject.transform.DOMove(machineIdol.position, .5f);
-            Invoke(nameof(EnableCanvas), .5f);
-            transform.DOMoveY(trayOut.position.y, .5f);
+            PullOutTray();
         }
         else
         {
-            machine.enabled = true;
-            trayCanvas.enabled = false;
-            transform.DOMoveY(trayIn.position.y, .5f);
+            PutAwayTray();
         }
-        
+
+    }
+
+    private void PutAwayTray()
+    {
+        Cursor.visible = false;
+        machine.enabled = true;
+        trayCanvas.enabled = false;
+        transform.DOMoveY(trayIn.position.y, .5f);
+    }
+
+    public void PullOutTray()
+    {
+        Cursor.visible = true;
+        machine.enabled = false;
+        machineObject.transform.DOMove(machineIdol.position, .5f);
+        Invoke(nameof(EnableCanvas), .5f);
+        transform.DOMoveY(trayOut.position.y, .5f);
     }
 
     void EnableCanvas()
     {
-        trayCanvas.enabled = V;
+        trayCanvas.enabled = true;
     }
 }

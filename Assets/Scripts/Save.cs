@@ -6,7 +6,7 @@ public class Save : MonoBehaviour
 {
 
     public Texture2D[] tattooDesigns;
-    [HideInInspector]public Texture2D tattooDesign;
+    public Texture2D tattooDesign;
 
     public RenderTexture tattooTexture;
     private float correctPixels;
@@ -15,7 +15,6 @@ public class Save : MonoBehaviour
     public GameObject youWinText;
     public GameObject youLoseText;
     public GameObject tryAgainButton;
-    public float passingAmount = 3500;
     public float coloredPixels;
     public Color targetColor;
     [SerializeField] PixelCounter pixelCounter;
@@ -39,7 +38,7 @@ public class Save : MonoBehaviour
         
         CompareTexture(playerTattooTexture, tattooDesign);
         var percentValue = (totalCorrectPixels / pixelCounter.totalPixels) * 100;
-        if (percentValue > 70)
+        if (percentValue >= 70)
         {
             youLoseText.SetActive(false);
             youWinText.SetActive(true);

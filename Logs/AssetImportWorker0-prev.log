@@ -15,11 +15,11 @@ E:/Unity Projects/Tattoo Sim 2.5 Prototype
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-51390
+64402
 Successfully changed project path to: E:/Unity Projects/Tattoo Sim 2.5 Prototype
 E:/Unity Projects/Tattoo Sim 2.5 Prototype
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 58.88 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 63.84 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.2.0b5 (e2067236bd5c)
 [Subsystems] Discovering subsystems at path E:/2020.2.0b5/Editor/Data/Resources/UnitySubsystems
@@ -35,5 +35,517 @@ Initialize mono
 Mono path[0] = 'E:/2020.2.0b5/Editor/Data/Managed'
 Mono path[1] = 'E:/2020.2.0b5/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'E:/2020.2.0b5/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56552
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56236
 Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: E:/2020.2.0b5/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: E:/2020.2.0b5/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001664 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 59.88 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.025 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.004024 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image E:\Unity Projects\Tattoo Sim 2.5 Prototype\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 55.74 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.365 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 0.45 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2136 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 108.5 MB.
+System memory in use after: 107.0 MB.
+
+Unloading 119 unused Assets to reduce memory usage. Loaded Objects now: 2545.
+Total: 3.519900 ms (FindLiveObjects: 0.405500 ms CreateObjectMapping: 0.065100 ms MarkObjects: 2.021300 ms  DeleteObjects: 1.026600 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Textures/Tattoo Designs/Diamond Design/Diamond_Design.png
+  artifactKey: Guid(788aa526f9fc81a49be30eee8ff5fe91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Tattoo Designs/Diamond Design/Diamond_Design.png using Guid(788aa526f9fc81a49be30eee8ff5fe91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a51ccfe25d1a79429ab57c016e686ae') in 0.076375 seconds
+  Import took 0.081435 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.502549 seconds.
+  path: Assets/Textures/Tattoo Designs/Diamond Design/Diamond_Design.png
+  artifactKey: Guid(788aa526f9fc81a49be30eee8ff5fe91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Tattoo Designs/Diamond Design/Diamond_Design.png using Guid(788aa526f9fc81a49be30eee8ff5fe91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a51ccfe25d1a79429ab57c016e686ae') in 0.006739 seconds
+  Import took 0.011394 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.759145 seconds.
+  path: Assets/Textures/Tattoo Designs/Diamond Design/Diamond_Design.png
+  artifactKey: Guid(788aa526f9fc81a49be30eee8ff5fe91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Tattoo Designs/Diamond Design/Diamond_Design.png using Guid(788aa526f9fc81a49be30eee8ff5fe91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c5b60703a50f3850a455dbbcb50f2f8') in 0.054290 seconds
+  Import took 0.058923 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.786295 seconds.
+  path: Assets/Textures/Tattoo Designs/Diamond Design/Diamond_Linework_.png
+  artifactKey: Guid(faa636ea0f4618449a90989f43ecee7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Tattoo Designs/Diamond Design/Diamond_Linework_.png using Guid(faa636ea0f4618449a90989f43ecee7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6abe99bf0e2936b2278c6ae4c90e658') in 0.019216 seconds
+  Import took 0.024088 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.108820 seconds.
+  path: Assets/Textures/Tattoo Designs/Diamond Design/Diamond_Design.png
+  artifactKey: Guid(788aa526f9fc81a49be30eee8ff5fe91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Tattoo Designs/Diamond Design/Diamond_Design.png using Guid(788aa526f9fc81a49be30eee8ff5fe91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25cf9fea9ac1c9bafe4bd3876230ceef') in 0.016862 seconds
+  Import took 0.021556 seconds .
+
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: E:/2020.2.0b5/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: E:/2020.2.0b5/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001414 seconds.
+Symbol file LoadedFromMemory doesn't match image E:\Unity Projects\Tattoo Sim 2.5 Prototype\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 50.85 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/EditorUtility.cs:593)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/EditorUtility.cs line 593]
+
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.065 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.003164 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image E:\Unity Projects\Tattoo Sim 2.5 Prototype\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.50 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/EditorUtility.cs:593)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/EditorUtility.cs line 593]
+
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.100 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.49 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 48 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 66.3 MB.
+System memory in use after: 64.9 MB.
+
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 2557.
+Total: 4.261100 ms (FindLiveObjects: 0.422400 ms CreateObjectMapping: 0.063500 ms MarkObjects: 2.299900 ms  DeleteObjects: 1.473400 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 183.795231 seconds.
+  path: Assets/Textures/Tattoo Designs/Star/Star_Design.png
+  artifactKey: Guid(f62b336b47583bd40a270552b3b86531) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Tattoo Designs/Star/Star_Design.png using Guid(f62b336b47583bd40a270552b3b86531) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de9aaf03c9cd538b10f29408e9202966') in 0.061882 seconds
+  Import took 0.067563 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.760780 seconds.
+  path: Assets/Textures/Tattoo Designs/Star/Star_Design.png
+  artifactKey: Guid(f62b336b47583bd40a270552b3b86531) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Tattoo Designs/Star/Star_Design.png using Guid(f62b336b47583bd40a270552b3b86531) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8fa128d5bf07060a5ee84d3c93688f52') in 0.013146 seconds
+  Import took 0.018162 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.603358 seconds.
+  path: Assets/Textures/Tattoo Designs/Star/Star_Design.png
+  artifactKey: Guid(f62b336b47583bd40a270552b3b86531) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Tattoo Designs/Star/Star_Design.png using Guid(f62b336b47583bd40a270552b3b86531) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93405c45d3af928930b38b00704382cb') in 0.010344 seconds
+  Import took 0.014913 seconds .
+
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: E:/2020.2.0b5/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: E:/2020.2.0b5/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001260 seconds.
+Symbol file LoadedFromMemory doesn't match image E:\Unity Projects\Tattoo Sim 2.5 Prototype\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 54.51 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/EditorUtility.cs:593)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/EditorUtility.cs line 593]
+
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.132 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.003214 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image E:\Unity Projects\Tattoo Sim 2.5 Prototype\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.48 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/EditorUtility.cs:593)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/EditorUtility.cs line 593]
+
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.060 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.46 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 48 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 66.3 MB.
+System memory in use after: 64.9 MB.
+
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 2564.
+Total: 3.512000 ms (FindLiveObjects: 0.403200 ms CreateObjectMapping: 0.064200 ms MarkObjects: 2.094900 ms  DeleteObjects: 0.948600 ms)
+
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: E:/2020.2.0b5/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: E:/2020.2.0b5/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001258 seconds.
+Symbol file LoadedFromMemory doesn't match image E:\Unity Projects\Tattoo Sim 2.5 Prototype\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 52.13 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/EditorUtility.cs:593)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/EditorUtility.cs line 593]
+
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.104 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.003049 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image E:\Unity Projects\Tattoo Sim 2.5 Prototype\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.47 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/EditorUtility.cs:593)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/EditorUtility.cs line 593]
+
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.042 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.52 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 48 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 66.3 MB.
+System memory in use after: 64.9 MB.
+
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 2570.
+Total: 4.004700 ms (FindLiveObjects: 0.693200 ms CreateObjectMapping: 0.141600 ms MarkObjects: 2.178100 ms  DeleteObjects: 0.990700 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 12995.902234 seconds.
+  path: Assets/Textures/Tattoo Designs/Bat Design/Bat_Full.png
+  artifactKey: Guid(bc081d16d18ec214ca4b7e03fe646221) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Tattoo Designs/Bat Design/Bat_Full.png using Guid(bc081d16d18ec214ca4b7e03fe646221) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '990e3cdfb1d6b9da641bb4193814c0bd') in 0.041764 seconds
+  Import took 0.047108 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.015368 seconds.
+  path: Assets/Textures/Tattoo Designs/Bat Design/Bat_Full.png
+  artifactKey: Guid(bc081d16d18ec214ca4b7e03fe646221) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Tattoo Designs/Bat Design/Bat_Full.png using Guid(bc081d16d18ec214ca4b7e03fe646221) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '990e3cdfb1d6b9da641bb4193814c0bd') in 0.020594 seconds
+  Import took 0.025110 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.403640 seconds.
+  path: Assets/Textures/Tattoo Designs/Bat Design/Bat_Linework.png
+  artifactKey: Guid(676ee296d89f49941a6e5a9ee70c0237) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Tattoo Designs/Bat Design/Bat_Linework.png using Guid(676ee296d89f49941a6e5a9ee70c0237) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '812f0cfab96d4d14cb1cd150787216dd') in 0.014247 seconds
+  Import took 0.018875 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.054775 seconds.
+  path: Assets/Textures/Tattoo Designs/Bat Design/Bat_Full_-alt.png
+  artifactKey: Guid(78f7444a8f4fedf449faca0154f2f07b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Tattoo Designs/Bat Design/Bat_Full_-alt.png using Guid(78f7444a8f4fedf449faca0154f2f07b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79bf251314bdd0dff08b0a5b7190dad3') in 0.016138 seconds
+  Import took 0.021492 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001196 seconds.
+  path: Assets/Textures/Tattoo Designs/Bat Design/Bat_Full_-alt.png
+  artifactKey: Guid(78f7444a8f4fedf449faca0154f2f07b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Tattoo Designs/Bat Design/Bat_Full_-alt.png using Guid(78f7444a8f4fedf449faca0154f2f07b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79bf251314bdd0dff08b0a5b7190dad3') in 0.014330 seconds
+  Import took 0.019905 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.066160 seconds.
+  path: Assets/Textures/Tattoo Designs/Bat Design/Bat_Linework_Alt.png
+  artifactKey: Guid(b40a72f1e9f76b245b7bbcb8b6838998) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Tattoo Designs/Bat Design/Bat_Linework_Alt.png using Guid(b40a72f1e9f76b245b7bbcb8b6838998) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83fa408e26d60e4337d360a7947a8b4f') in 0.013531 seconds
+  Import took 0.019218 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 18.528385 seconds.
+  path: Assets/Textures/Tattoo Designs/Bat Design/Bat_Linework_Alt.png
+  artifactKey: Guid(b40a72f1e9f76b245b7bbcb8b6838998) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Tattoo Designs/Bat Design/Bat_Linework_Alt.png using Guid(b40a72f1e9f76b245b7bbcb8b6838998) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '147c92c78efc960af069527db86952fa') in 0.037226 seconds
+  Import took 0.041784 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.933815 seconds.
+  path: Assets/Textures/Tattoo Designs/Bat Design/Bat_Full_-alt.png
+  artifactKey: Guid(78f7444a8f4fedf449faca0154f2f07b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Tattoo Designs/Bat Design/Bat_Full_-alt.png using Guid(78f7444a8f4fedf449faca0154f2f07b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '74666532decfc8321651733c6ffec07b') in 0.014649 seconds
+  Import took 0.019532 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.756397 seconds.
+  path: Assets/Textures/Tattoo Designs/Diamond Design
+  artifactKey: Guid(fb3a199876afe8d4fa8cf5ddeef579ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Tattoo Designs/Diamond Design using Guid(fb3a199876afe8d4fa8cf5ddeef579ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98d6ab7d3bd0092b12a1fd27f5703eb3') in 0.006335 seconds
+  Import took 0.011190 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000540 seconds.
+  path: Assets/Textures/Tattoo Designs/Diamond Design
+  artifactKey: Guid(fb3a199876afe8d4fa8cf5ddeef579ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Tattoo Designs/Diamond Design using Guid(fb3a199876afe8d4fa8cf5ddeef579ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98d6ab7d3bd0092b12a1fd27f5703eb3') in 0.001913 seconds
+  Import took 0.007010 seconds .
+
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: E:/2020.2.0b5/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: E:/2020.2.0b5/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001543 seconds.
+Symbol file LoadedFromMemory doesn't match image E:\Unity Projects\Tattoo Sim 2.5 Prototype\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 57.37 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/EditorUtility.cs:593)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/EditorUtility.cs line 593]
+
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.339 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.003309 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image E:\Unity Projects\Tattoo Sim 2.5 Prototype\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.52 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/EditorUtility.cs:593)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/EditorUtility.cs line 593]
+
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.279 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.70 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 48 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 66.3 MB.
+System memory in use after: 64.9 MB.
+
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 2577.
+Total: 4.985400 ms (FindLiveObjects: 0.525100 ms CreateObjectMapping: 0.091800 ms MarkObjects: 3.151600 ms  DeleteObjects: 1.215000 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 313.428096 seconds.
+  path: Assets/Textures/Tattoo Designs/Bat Design/Bat_Full_-alt.png
+  artifactKey: Guid(78f7444a8f4fedf449faca0154f2f07b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Tattoo Designs/Bat Design/Bat_Full_-alt.png using Guid(78f7444a8f4fedf449faca0154f2f07b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0d24ae9e365f700b06e26dfba797054') in 0.171498 seconds
+  Import took 0.176359 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.773558 seconds.
+  path: Assets/Textures/Tattoo Designs/Bat Design/Bat_Full_-alt.png
+  artifactKey: Guid(78f7444a8f4fedf449faca0154f2f07b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Tattoo Designs/Bat Design/Bat_Full_-alt.png using Guid(78f7444a8f4fedf449faca0154f2f07b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd30c1fb322d5fc7c964b9348a602e9e6') in 0.031599 seconds
+  Import took 0.036213 seconds .
+
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: E:/2020.2.0b5/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: E:/2020.2.0b5/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001449 seconds.
+Symbol file LoadedFromMemory doesn't match image E:\Unity Projects\Tattoo Sim 2.5 Prototype\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 54.27 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/EditorUtility.cs:593)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/EditorUtility.cs line 593]
+
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.276 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.003077 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image E:\Unity Projects\Tattoo Sim 2.5 Prototype\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.46 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/EditorUtility.cs:593)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.probuilder@4.4.0/Editor/EditorCore/EditorUtility.cs line 593]
+
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.191 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.47 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 48 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 66.4 MB.
+System memory in use after: 64.9 MB.
+
+Unloading 47 unused Assets to reduce memory usage. Loaded Objects now: 2584.
+Total: 3.483500 ms (FindLiveObjects: 0.415500 ms CreateObjectMapping: 0.063100 ms MarkObjects: 2.001400 ms  DeleteObjects: 1.002100 ms)
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

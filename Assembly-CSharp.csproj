@@ -57,18 +57,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\NeedleSelector.cs" />
+    <Compile Include="Assets\Scripts\MayoTrayUI.cs" />
     <Compile Include="Assets\Scripts\MachineVibrate.cs" />
     <Compile Include="Assets\Scripts\Ink.cs" />
     <Compile Include="Assets\Scripts\SceneHandler.cs" />
     <Compile Include="Assets\Scripts\TattooDesignSelector.cs" />
     <Compile Include="Assets\Scripts\NerveMeter.cs" />
+    <Compile Include="Assets\Scripts\PixelCounter.cs" />
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
     <Compile Include="Assets\Scripts\Machine.cs" />
     <Compile Include="Assets\Scripts\Raycasting.cs" />
     <Compile Include="Assets\Scripts\ColorChanger.cs" />
     <Compile Include="Assets\Scripts\Save.cs" />
-    <Compile Include="Assets\Scripts\MayoTrayUI.cs" />
-    <Compile Include="Assets\Scripts\PixelCounter.cs" />
+    <Compile Include="Assets\Scripts\CameraZoom.cs" />
+    <Compile Include="Assets\Scripts\MachineCrosshair.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

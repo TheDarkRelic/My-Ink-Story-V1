@@ -5,7 +5,8 @@ public class MachineVibrate : MonoBehaviour
 {
     public bool vibrating;
     public bool shaking;
-    [Range(10f, 100f)] public float steadiness = 10f;
+    [Range(1f, 100f)] public float steadiness = 10f;
+    [Range(50f, 500f)] public float vibeDampener = 50f;
 
     private void Start()
     {
@@ -17,13 +18,13 @@ public class MachineVibrate : MonoBehaviour
         vibrating = true;
         if (vibrating && !shaking)
         {
-            transform.position += Vector3.up / 25;
+            transform.position += Vector3.up / vibeDampener;
             yield return new WaitForSeconds(.0125f);
-            transform.position += Vector3.down / 25;
+            transform.position += Vector3.down / vibeDampener;
             yield return new WaitForSeconds(.0125f);
-            transform.position += Vector3.left / 25;
+            transform.position += Vector3.left / vibeDampener;
             yield return new WaitForSeconds(.0125f);
-            transform.position += Vector3.right / 25;
+            transform.position += Vector3.right / vibeDampener;
             yield return new WaitForSeconds(.0125f);
         }
         else if (vibrating && shaking)
