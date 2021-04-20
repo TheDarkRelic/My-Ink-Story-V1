@@ -8,6 +8,11 @@ public class Raycasting : MonoBehaviour
     [SerializeField] Transform idolPos;
     public Ray ray;
 
+    private void OnEnable()
+    {
+        Cursor.visible = true;
+    }
+
     void FixedUpdate()
     {
 
@@ -16,10 +21,11 @@ public class Raycasting : MonoBehaviour
         if (Physics.Raycast(ray, out hit, 100, layerMask))
         {
             //SetIdolPosition();
+            Cursor.visible = false;
         }
         else
         {
-            //machine.DOMove(new Vector3(7, 0, -5), .5f);
+            Cursor.visible = true;
             machine.position = new Vector3(7, 0, -5);
             machine.rotation = idolPos.rotation;
         }
@@ -28,7 +34,5 @@ public class Raycasting : MonoBehaviour
     public void SetIdolPosition()
     {
         machine.position = hit.point + (Vector3.up * machineHieght) + (Vector3.forward * -2);
-
-        //machine.DOMove(hit.point + Vector3.up * machineHieght, .5f);
     }
 }
