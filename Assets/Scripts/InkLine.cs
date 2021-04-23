@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InkLine : MonoBehaviour
 {
-    [SerializeField] LineRenderer lineRenderer;
+    public LineRenderer lineRenderer;
 
     List<Vector3> points;
     [SerializeField] float pointDistance = .05f;
@@ -23,12 +23,29 @@ public class InkLine : MonoBehaviour
             AddPoint(mousePosition);
         }
     }
-
     
-    private void AddPoint(Vector3 point)
+    public void AddPoint(Vector3 point)
     {
         points.Add(point);
         lineRenderer.positionCount = points.Count;
         lineRenderer.SetPosition(points.Count - 1, point);
+    }
+
+    public void SelectNeedleSize(float size)
+    {
+        lineRenderer.startWidth = size;
+        lineRenderer.endWidth = size;
+    }
+
+    public void SelectColor(Color newColor)
+    {
+        lineRenderer.startColor = newColor;
+        lineRenderer.endColor = newColor;
+    }
+
+    public void SelectColor32(Color32 newColor)
+    {
+        lineRenderer.startColor = newColor;
+        lineRenderer.endColor = newColor;
     }
 }

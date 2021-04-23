@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1544301084}
-  m_IndirectSpecularColor: {r: 0.17569795, g: 0.21985695, b: 0.30218476, a: 1}
+  m_IndirectSpecularColor: {r: 0.45617765, g: 0.5062342, b: 0.5857658, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1987,7 +1987,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c03a3183795c1c4fa83519da655b3b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ink: {fileID: 8844953029463364899, guid: e9021dab0b9aea94da677bf413883ab6, type: 3}
+  inkLine: {fileID: 4364114332968856074, guid: d8ddbe52b087baf4d80eb09d33e0aff7, type: 3}
 --- !u!114 &524604386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2092,8 +2092,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tattooDesigns:
   - {fileID: 2800000, guid: f62b336b47583bd40a270552b3b86531, type: 3}
-  - {fileID: 2800000, guid: 0fcce55942fc3a8479c47c5164f2d67f, type: 3}
-  - {fileID: 2800000, guid: dc2a67948e711d0489356de199c403fc, type: 3}
+  - {fileID: 2800000, guid: 788aa526f9fc81a49be30eee8ff5fe91, type: 3}
+  - {fileID: 2800000, guid: 7b6c0b093fc98f64cb2e874e277b82b3, type: 3}
   tattooDesign: {fileID: 2800000, guid: 788aa526f9fc81a49be30eee8ff5fe91, type: 3}
   tattooTexture: {fileID: 8400000, guid: 47a578b66cc7dc34e85f674eed575674, type: 2}
   totalCorrectPixels: 0
@@ -2116,8 +2116,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 851d18cb573a59e41bb9abcd1db401b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inkParticle: {fileID: 3905124517101962603, guid: e9021dab0b9aea94da677bf413883ab6, type: 3}
+  inkLinePrefab: {fileID: 4364114332968856075, guid: d8ddbe52b087baf4d80eb09d33e0aff7, type: 3}
   crosshair: {fileID: 823208273}
+  inkLine: {fileID: 4364114332968856074, guid: d8ddbe52b087baf4d80eb09d33e0aff7, type: 3}
 --- !u!114 &524604392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2213,7 +2214,7 @@ GameObject:
   - component: {fileID: 579216986}
   - component: {fileID: 579216985}
   m_Layer: 0
-  m_Name: Test
+  m_Name: InkPlacmentHandler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2233,8 +2234,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inkLinePreFab: {fileID: 4364114332968856075, guid: d8ddbe52b087baf4d80eb09d33e0aff7, type: 3}
   raycasting: {fileID: 416470489}
-  zDepth: 10
-  inkOffset: 1
 --- !u!4 &579216986
 Transform:
   m_ObjectHideFlags: 0
@@ -2471,7 +2470,7 @@ MonoBehaviour:
         m_MethodName: SetDisplayImage
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 21300000, guid: dc2a67948e711d0489356de199c403fc, type: 3}
+          m_ObjectArgument: {fileID: 21300000, guid: 7b6c0b093fc98f64cb2e874e277b82b3, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -2483,7 +2482,7 @@ MonoBehaviour:
         m_MethodName: SetTattooDisplayPattern
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 21300000, guid: 21387215e75fec542804fe8e5d6acda9, type: 3}
+          m_ObjectArgument: {fileID: 21300000, guid: 7dad19aa20dd79b4a9889324330e2299, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -2495,7 +2494,7 @@ MonoBehaviour:
         m_MethodName: SetImageToCompare
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 21300000, guid: dc2a67948e711d0489356de199c403fc, type: 3}
+          m_ObjectArgument: {fileID: 21300000, guid: 7b6c0b093fc98f64cb2e874e277b82b3, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -2519,7 +2518,7 @@ MonoBehaviour:
         m_MethodName: GetPixelCount
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 2800000, guid: dc2a67948e711d0489356de199c403fc, type: 3}
+          m_ObjectArgument: {fileID: 2800000, guid: 7b6c0b093fc98f64cb2e874e277b82b3, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Texture2D, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -3471,9 +3470,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -250960061
+  m_SortingLayer: 1
+  m_SortingOrder: -10
   m_Sprite: {fileID: 21300000, guid: 47ac64406485c15448d32b07c8b06506, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3607,15 +3606,15 @@ RectTransform:
   m_GameObject: {fileID: 886970725}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.1, y: 1.1, z: 1}
   m_Children: []
   m_Father: {fileID: 665788459}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1.074997, y: 0.0000076293945}
-  m_SizeDelta: {x: -2.15, y: -2.15}
+  m_AnchoredPosition: {x: 3.699997, y: 7.700001}
+  m_SizeDelta: {x: 0.586, y: 5.5806}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &886970727
 MonoBehaviour:
@@ -3637,7 +3636,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: dc2a67948e711d0489356de199c403fc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7b6c0b093fc98f64cb2e874e277b82b3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4191,7 +4190,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 524604385}
         m_TargetAssemblyTypeName: ColorChanger, Assembly-CSharp
-        m_MethodName: ChangeColorPurple
+        m_MethodName: ChangeColorGreen
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5006,7 +5005,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 524604385}
         m_TargetAssemblyTypeName: ColorChanger, Assembly-CSharp
-        m_MethodName: ChangeColorDarkGray
+        m_MethodName: ChangeColorRed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5396,7 +5395,7 @@ GameObject:
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1519403514
 Transform:
   m_ObjectHideFlags: 0
@@ -5444,9 +5443,6 @@ MonoBehaviour:
   animator: {fileID: 1519403517}
   raycasting: {fileID: 416470489}
   vibrate: {fileID: 1519403515}
-  machineSpeed: 0.005
-  ink: {fileID: 3905124517101962603, guid: e9021dab0b9aea94da677bf413883ab6, type: 3}
-  inkParent: {fileID: 468972870}
   smoothing: 0.1
 --- !u!95 &1519403517
 Animator:
@@ -9178,7 +9174,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 82fc3dfcb0aefbf46a914c83ae72ae02, type: 2}
+  - {fileID: 2100000, guid: 2d371cc689639a944bbd12cb776240a0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10333,7 +10329,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 24ec2c67e15d0814fa50792415fb3441, type: 2}
+  - {fileID: 2100000, guid: 295a04e3f82448345871456c77b16745, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

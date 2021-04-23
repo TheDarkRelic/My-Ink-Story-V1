@@ -7,27 +7,29 @@ public class InkPlacementHandler : MonoBehaviour
     [SerializeField] GameObject inkLinePreFab;
     [SerializeField] Raycasting raycasting;
     private InkLine  activeInkLine;
-    [SerializeField] float zDepth = 10;
-    [SerializeField] float inkOffset = .15f;
+    private Vector3 hitPoint;
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && Physics.Raycast(raycasting.ray, out raycasting.hit, 100, raycasting.layerMask))
         {
-            GameObject inkLineGameObject = Instantiate(inkLinePreFab);
+            GameObject inkLineGameObject = Instantiate(inkLinePreFab, raycasting.hit.point, Quaternion.identity);
             activeInkLine = inkLineGameObject.GetComponent<InkLine>();
         }
 
         if (Input.GetMouseButtonUp(0))
         {
+            if (activeInkLine != null) { activeInkLine.AddPoint(hitPoint); }
             activeInkLine = null;
         }
 
         if (activeInkLine != null)
         {
-            var hitPoint = raycasting.hit.point + (-Vector3.forward * inkOffset);
+            hitPoint = raycasting.hit.point;
             activeInkLine.UpdateLine(hitPoint);
         }
         
     }
+
+    
 }
