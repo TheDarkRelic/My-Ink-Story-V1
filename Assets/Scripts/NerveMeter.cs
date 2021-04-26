@@ -1,31 +1,37 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 
 public class NerveMeter : MonoBehaviour
 {
     [SerializeField] Slider nerveMeter;
-    [SerializeField] Image fill;
+    [SerializeField] Image nerveFill, painFill;
     [SerializeField] Gradient barColorGradient;
     [SerializeField] float nerveLevel, minNerveLevel = 0, maxNerveLevel, nerveDecreaseSpeed = 1, nerveIncreaseSpeed = 1;
+    [SerializeField] float painLevel, minPainLevel = 0, maxPainLevel = 20;
 
     [SerializeField] MachineVibrate machineVibrate;
 
-    private void SetMaxNerveLevel()
+
+    private void Awake()
     {
-        nerveMeter.maxValue = maxNerveLevel;
-        barColorGradient.Evaluate(1);
+        SetMaxNerveLevel();
     }
 
     void Update()
     {
+        
+        //float amount = (painLevel / 100.0f) * 180.0f / 360;
+        //painFill.fillAmount = amount;
         if (Input.GetMouseButton(0))
         {
             nerveLevel += Time.deltaTime;
-            if (nerveLevel > maxNerveLevel) { nerveLevel = maxNerveLevel; }
-            if (nerveLevel >= 2.2f)
+            if (nerveLevel > maxNerveLevel)
             {
-                machineVibrate.shaking = true;
+                nerveLevel = maxNerveLevel;
             }
+            
+            
         }
         else
         {
@@ -40,6 +46,13 @@ public class NerveMeter : MonoBehaviour
     private void SetCurrentNerveLevel()
     {
         nerveMeter.value = nerveLevel;
-        fill.color = barColorGradient.Evaluate(nerveMeter.normalizedValue);
+        nerveFill.color = barColorGradient.Evaluate(nerveMeter.normalizedValue);
     }
+
+    private void SetMaxNerveLevel()
+    {
+        nerveMeter.maxValue = maxNerveLevel;
+        barColorGradient.Evaluate(1);
+    }
+
 }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.IO;
+using TMPro;
 using UnityEngine;
 
 public class Save : MonoBehaviour
@@ -18,10 +19,13 @@ public class Save : MonoBehaviour
     public float coloredPixels;
     public Color targetColor;
     [SerializeField] PixelCounter pixelCounter;
+    Texture2D finalData;
+    [SerializeField] TMP_Text percentageText;
 
     public void SaveTexture()
     {
         StartCoroutine(CoSave());
+        
     }
 
     IEnumerator CoSave()
@@ -35,22 +39,36 @@ public class Save : MonoBehaviour
 
         var data = playerTattooTexture.EncodeToPNG();
         File.WriteAllBytes(Application.dataPath + "/saveImage.png", data);
-        
-        CompareTexture(playerTattooTexture, tattooDesign);
+
+        finalData = new Texture2D(tattooTexture.width, tattooTexture.height);
+        finalData.LoadImage(data);
+
+        CompareTextures();
+    }
+
+    private void CompareTextures()
+    {
+        CompareTexture(finalData, tattooDesign);
         var percentValue = (totalCorrectPixels / pixelCounter.totalPixels) * 100;
+        float roundedPercent = percentValue;
+        roundedPercent = Mathf.Round(roundedPercent * 10.0f) * 0.1f;
+
         if (percentValue >= 70)
         {
+            percentageText.enabled = true;
+            percentageText.text = $"Great Job! you got {roundedPercent}%";
             youLoseText.SetActive(false);
             youWinText.SetActive(true);
             tryAgainButton.SetActive(true);
         }
         else
         {
-             youWinText.SetActive(false);
-             youLoseText.SetActive(true);
+            percentageText.enabled = true;
+            percentageText.text = $"OUch!  {roundedPercent}% ??? They aint coming back...";
+            youWinText.SetActive(false);
+            youLoseText.SetActive(true);
             tryAgainButton.SetActive(true);
         }
-
     }
 
     private void CompareTexture(Texture2D first, Texture2D second)
@@ -84,6 +102,7 @@ public class Save : MonoBehaviour
     [ContextMenu("MapPixels")]
     public void MapPixelCountByColor()
     {
+        coloredPixels = 0;
         Color[] textureToMap = tattooDesign.GetPixels();
         foreach (var p in textureToMap)
         {

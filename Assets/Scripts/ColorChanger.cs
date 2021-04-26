@@ -4,6 +4,10 @@ public class ColorChanger : MonoBehaviour
 {
     [SerializeField] InkLine inkLine;
 
+    public void ChangeColor(Material newMaterial)
+    {
+        inkLine.SelectColor(newMaterial.color);
+    }
 
     public void ChangeColorRed()
     {
@@ -13,7 +17,7 @@ public class ColorChanger : MonoBehaviour
 
     public void ChangeColorPink()
     {
-        inkLine.SelectColor32(new Color32 (255, 128, 128, 255));
+        inkLine.SelectColor32(new Color32(255, 128, 128, 255));
         inkLine.lineRenderer.sortingOrder = 7;
     }
 

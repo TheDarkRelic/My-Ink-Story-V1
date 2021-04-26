@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Main Menu.unity
+    guid: 43e83af683e487641b965c13a1986cd6
+  - enabled: 1
+    path: Assets/Scenes/TattooBooth.unity
+    guid: c3e9620068cf99c43b8a1569a8c5fd6a
   m_configObjects: {}
