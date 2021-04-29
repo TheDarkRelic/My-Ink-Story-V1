@@ -1,0 +1,21 @@
+Using pre-set license
+Built from '2020.2/staging' branch; Version is '2020.2.0b5 (e2067236bd5c) revision 14812786'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10  (10.0.0) 64bit' Language: 'en' Physical Memory: 16317 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+E:\2020.2.0b5\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker1
+-projectPath
+E:/Unity Projects/Tattoo Sim 2.5 Prototype
+-logFile
+Logs/AssetImportWorker1.log
+-srvPort
+50463
+Successfully changed project path to: E:/Unity Projects/Tattoo Sim 2.5 Prototype
+E:/Unity Projects/Tattoo Sim 2.5 Prototype
+Using Asset Import Pipeline V2.

@@ -11,14 +11,17 @@ public class MayoTrayUI : MonoBehaviour
     [SerializeField] MachineCrosshair machineCrosshair;
     [SerializeField] Raycasting raycasting;
     bool trayIsOut;
+    SceneHandler playable;
 
     private void Awake()
     {
         trayIsOut = false;
+        playable = SceneHandler.Instance;
     }
 
     public void PutAwayTray()
     {
+        playable.playable = true;
         trayIsOut = false;
         ToggleRaycast(true);
         machineCrosshair.ToggleCursor(true);
@@ -30,6 +33,7 @@ public class MayoTrayUI : MonoBehaviour
 
     public void PullOutTray()
     {
+        playable.playable = false;
         trayIsOut = true;
         ToggleRaycast(false);
         machineCrosshair.ToggleCursor(false);

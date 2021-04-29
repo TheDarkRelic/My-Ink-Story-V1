@@ -4,6 +4,7 @@ using System.Collections;
 
 public class SceneHandler : MonoBehaviour
 {
+    public bool playable;
     private static SceneHandler instance;
 
     public static SceneHandler Instance
@@ -35,9 +36,18 @@ public class SceneHandler : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        playable = false;
     }
+
     public void LoadScene(int scene)
     {
         SceneManager.LoadScene(scene);
+    }
+
+    public void TogglePlayable()
+    {
+        if (playable) { playable = false; }
+        else { playable = true; }
     }
 }

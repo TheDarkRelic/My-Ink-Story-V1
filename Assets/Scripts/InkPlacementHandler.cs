@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class InkPlacementHandler : MonoBehaviour
@@ -11,13 +9,15 @@ public class InkPlacementHandler : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && Physics.Raycast(raycasting.ray, out raycasting.hit, 100, raycasting.layerMask))
+        bool playable = SceneHandler.Instance.playable;
+
+        if (playable && Input.GetMouseButtonDown(0) && Physics.Raycast(raycasting.ray, out raycasting.hit, 100, raycasting.layerMask))
         {
             GameObject inkLineGameObject = Instantiate(inkLinePreFab, raycasting.hit.point, Quaternion.identity);
             activeInkLine = inkLineGameObject.GetComponent<InkLine>();
         }
 
-        if (Input.GetMouseButtonUp(0))
+        if (playable && Input.GetMouseButtonUp(0))
         {
             if (activeInkLine != null) { activeInkLine.AddPoint(hitPoint); }
             activeInkLine = null;

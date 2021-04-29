@@ -52,7 +52,11 @@ public class Save : MonoBehaviour
         var percentValue = (totalCorrectPixels / pixelCounter.totalPixels) * 100;
         float roundedPercent = percentValue;
         roundedPercent = Mathf.Round(roundedPercent * 10.0f) * 0.1f;
+        DisplayResults(percentValue, roundedPercent);
+    }
 
+    private void DisplayResults(float percentValue, float roundedPercent)
+    {
         if (percentValue >= 70)
         {
             percentageText.enabled = true;
