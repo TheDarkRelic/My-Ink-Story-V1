@@ -2777,7 +2777,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pixelCounter: {fileID: 524604394}
-  unlockable: {fileID: 0}
+  unlockable: {fileID: 1389114387}
   tattooDesigns:
   - {fileID: 2800000, guid: f62b336b47583bd40a270552b3b86531, type: 3}
   - {fileID: 2800000, guid: 788aa526f9fc81a49be30eee8ff5fe91, type: 3}
@@ -2792,6 +2792,7 @@ MonoBehaviour:
   youWinText: {fileID: 1343756665}
   youLoseText: {fileID: 1971235801}
   tryAgainButton: {fileID: 1842785152}
+  designNumber: 0
 --- !u!114 &524604391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2853,7 +2854,6 @@ MonoBehaviour:
   nerveLevel: 0
   minNerveLevel: 0
   nerveDecreaseSpeed: 2
-  nerveIncreaseSpeed: 0
   maxNerveLevel: 2.5
   machineVibrate: {fileID: 1519403515}
 --- !u!114 &524604393
@@ -3250,6 +3250,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 524604390}
+        m_TargetAssemblyTypeName: Save, Assembly-CSharp
+        m_MethodName: SetDesignNumber
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &665788461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3300,9 +3312,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6ccc3f131dd3b641b7b4a6a669ad5f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  percentCorrect: 0
   lockPanel: {fileID: 464511702}
-  designNumber: 2
+  designNumber: 3
+  roseButton: {fileID: 665788460}
+  diamondButton: {fileID: 1389114384}
+  designsUnlocked: 0
 --- !u!1 &665957526
 GameObject:
   m_ObjectHideFlags: 0
@@ -6932,6 +6946,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 524604390}
+        m_TargetAssemblyTypeName: Save, Assembly-CSharp
+        m_MethodName: SetDesignNumber
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1389114385
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6982,9 +7008,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6ccc3f131dd3b641b7b4a6a669ad5f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  percentCorrect: 0
-  lockPanel: {fileID: 1135814943}
-  designNumber: 1
+  lockPanel: {fileID: 464511702}
+  designNumber: 2
+  roseButton: {fileID: 665788460}
+  diamondButton: {fileID: 1389114384}
+  designsUnlocked: 0
 --- !u!1 &1409931712
 GameObject:
   m_ObjectHideFlags: 0
@@ -11015,7 +11043,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 891e1f1d94b38714d9cebf5fd15dcda9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxPain: 2.5
+  maxPain: 3
   currentPain: 0
   fill: {fileID: 1885053820}
   nerveMeter: {fileID: 524604392}
@@ -11322,6 +11350,7 @@ GameObject:
   - component: {fileID: 2085587838}
   - component: {fileID: 2085587837}
   - component: {fileID: 2085587836}
+  - component: {fileID: 2085587839}
   m_Layer: 5
   m_Name: Design 1 Button
   m_TagString: Untagged
@@ -11465,6 +11494,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 524604390}
+        m_TargetAssemblyTypeName: Save, Assembly-CSharp
+        m_MethodName: SetDesignNumber
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2085587837
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11503,6 +11544,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2085587834}
   m_CullTransparentMesh: 1
+--- !u!114 &2085587839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2085587834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6ccc3f131dd3b641b7b4a6a669ad5f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lockPanel: {fileID: 1135814943}
+  designNumber: 1
+  roseButton: {fileID: 665788460}
+  diamondButton: {fileID: 1389114384}
+  designsUnlocked: 0
 --- !u!1 &2096750081
 GameObject:
   m_ObjectHideFlags: 0

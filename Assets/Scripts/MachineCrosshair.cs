@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class MachineCrosshair : MonoBehaviour
 {
-    [SerializeField] Raycasting raycasting;
+    [SerializeField] Raycasting raycasting = null;
     [SerializeField] float crosshairYOffset = -0.8f;
 
     void Update()

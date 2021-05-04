@@ -4,13 +4,13 @@ using System.Collections;
 
 public class NerveMeter : MonoBehaviour
 {
-    [SerializeField] Slider nerveMeter;
-    [SerializeField] Image nerveFill;
-    [SerializeField] Gradient barColorGradient;
-    [SerializeField] float nerveLevel, minNerveLevel = 0, nerveDecreaseSpeed = 1, nerveIncreaseSpeed = 1;
+    [SerializeField] Slider nerveMeter = null;
+    [SerializeField] Image nerveFill = null;
+    [SerializeField] Gradient barColorGradient = null;
+    [SerializeField] float nerveLevel, minNerveLevel = 0, nerveDecreaseSpeed = 1;
     public float maxNerveLevel;
 
-    [SerializeField] MachineVibrate machineVibrate;
+    [SerializeField] MachineVibrate machineVibrate = null;
 
 
     private void Awake()

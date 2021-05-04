@@ -1,16 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class PainToleranceMeter : MonoBehaviour
 {
-    [SerializeField] float maxPain;
-    [SerializeField] float currentPain;
-    [SerializeField] Image fill;
+    [SerializeField] float maxPain = 3;
+    [SerializeField] float currentPain = 0;
+    [SerializeField] Image fill = null;
 
-    [SerializeField] NerveMeter nerveMeter;
-    [SerializeField] PainToleranceUI painUI;
+    [SerializeField] NerveMeter nerveMeter = null;
+    [SerializeField] PainToleranceUI painUI = null;
 
 
     void Update()

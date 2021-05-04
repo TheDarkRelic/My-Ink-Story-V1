@@ -3,11 +3,11 @@ using DG.Tweening;
 
 public class Machine : MonoBehaviour
 {
-    [SerializeField] Animator animator;
-    [SerializeField] Raycasting raycasting;
-    [SerializeField] MachineVibrate vibrate;
+    [SerializeField] Animator animator = null;
+    [SerializeField] Raycasting raycasting = null;
+    [SerializeField] MachineVibrate vibrate = null;
     [SerializeField] float smoothing = .2f;
-    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioSource audioSource = null;
     private bool playAudio;
 
     private void Update()

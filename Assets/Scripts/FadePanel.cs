@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FadePanel : MonoBehaviour
 {
-    [SerializeField] Animator animator;
+    [SerializeField] Animator animator = null;
 
     public void PlayAnimation()
     {

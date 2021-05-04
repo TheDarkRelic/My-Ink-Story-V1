@@ -4,8 +4,8 @@ using TMPro;
 public class PainToleranceUI : MonoBehaviour
 {
     [SerializeField] TMP_Text clientConditonText;
-    [SerializeField] GameObject clientConditionPanel;
-    [SerializeField] Raycasting raycasting;
+    [SerializeField] GameObject clientConditionPanel = null;
+    [SerializeField] Raycasting raycasting = null;
 
     public void ActivateClientConditionPanel()
     {

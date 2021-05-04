@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class UISoundFxHandler : MonoBehaviour
 {
-    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioSource audioSource = null;
 
     public void PlayAudio(AudioClip clip)
     {

@@ -2,10 +2,9 @@ using UnityEngine;
 
 public class NeedleSelector : MonoBehaviour
 {
-    [SerializeField] GameObject inkLinePrefab;
-    [SerializeField] MachineCrosshair crosshair;
-    [SerializeField] InkLine inkLine;
-    float size;
+    [SerializeField] MachineCrosshair crosshair = null;
+    [SerializeField] InkLine inkLine = null;
+    private float size;
 
     private void Start()
     {

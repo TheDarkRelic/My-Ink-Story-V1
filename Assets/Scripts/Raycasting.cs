@@ -1,11 +1,11 @@
 using UnityEngine;
 public class Raycasting : MonoBehaviour
 {
-    [SerializeField] Transform machine;
+    [SerializeField] Transform machine = null;
     public RaycastHit hit;
     public  LayerMask layerMask;
     public float machineHieght = 1;
-    [SerializeField] Transform idolPos;
+    [SerializeField] Transform idolPos = null;
     public Ray ray;
 
     private void OnEnable()

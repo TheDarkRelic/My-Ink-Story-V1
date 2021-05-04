@@ -4,15 +4,15 @@ using UnityEngine.UI;
 
 public class MayoTrayUI : MonoBehaviour
 {
-    [SerializeField] Transform trayIn, trayOut, machineIdol;
-    [SerializeField] Canvas trayCanvas;
-    [SerializeField] GameObject machineObject;
-    [SerializeField] Machine machine;
-    [SerializeField] MachineCrosshair machineCrosshair;
-    [SerializeField] Raycasting raycasting;
+    [SerializeField] Transform trayIn = null, trayOut = null, machineIdol = null;
+    [SerializeField] Canvas trayCanvas = null;
+    [SerializeField] GameObject machineObject = null;
+    [SerializeField] Machine machine = null;
+    [SerializeField] MachineCrosshair machineCrosshair = null;
+    [SerializeField] Raycasting raycasting = null;
     bool trayIsOut;
     SceneHandler playable;
-    [SerializeField] GameObject trayButton;
+    [SerializeField] GameObject trayButton = null;
 
     private void Awake()
     {

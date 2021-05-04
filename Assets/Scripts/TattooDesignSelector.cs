@@ -4,15 +4,15 @@ using UnityEngine.UI;
 
 public class TattooDesignSelector : MonoBehaviour
 {
-    [SerializeField] Save save;
-    [SerializeField] Image tattooDisplayImage;
-    [SerializeField] SpriteRenderer tattooDisplayPattern;
+    [SerializeField] Save save = null;
+    [SerializeField] Image tattooDisplayImage = null;
+    [SerializeField] SpriteRenderer tattooDisplayPattern = null;
     private Sprite _tattooCompareImage;
-    [SerializeField] GameObject designSelectionPanal;
+    [SerializeField] GameObject designSelectionPanal = null;
     public bool isActive;
-    [SerializeField] Sprite defaultDisplay, defaultPattern, defaultCompare;
-    [SerializeField] Texture2D defaultTexture;
-    [SerializeField] PixelCounter pixelCounter;
+    [SerializeField] Sprite defaultDisplay = null, defaultPattern = null, defaultCompare = null;
+    [SerializeField] Texture2D defaultTexture = null;
+    [SerializeField] PixelCounter pixelCounter = null;
 
     private void Start()
     {

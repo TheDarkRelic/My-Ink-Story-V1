@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class Tutorial : MonoBehaviour
 {
-    [SerializeField] GameObject tutorialBox1;
+    [SerializeField] GameObject tutorialBox1 = null;
     string complete;
-    [SerializeField] MayoTrayUI mayoTray;
+    [SerializeField] MayoTrayUI mayoTray = null;
 
     private void OnEnable()
     {

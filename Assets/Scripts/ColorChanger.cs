@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ColorChanger : MonoBehaviour
 {
-    [SerializeField] InkLine inkLine;
+    [SerializeField] InkLine inkLine = null;
 
     public void ChangeColor(Material newMaterial)
     {

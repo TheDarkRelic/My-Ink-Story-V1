@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class InkPlacementHandler : MonoBehaviour
 {
-    [SerializeField] GameObject inkLinePreFab;
-    [SerializeField] Raycasting raycasting;
+    [SerializeField] GameObject inkLinePreFab = null;
+    [SerializeField] Raycasting raycasting = null;
     private InkLine  activeInkLine;
     private Vector3 hitPoint;
 

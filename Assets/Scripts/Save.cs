@@ -5,9 +5,10 @@ using UnityEngine;
 
 public class Save : MonoBehaviour
 {
-    [SerializeField] PixelCounter pixelCounter;
-    [SerializeField] Unlockable unlockable;
+    [SerializeField] PixelCounter pixelCounter = null;
+    [SerializeField] Unlockable unlockable = null;
 
+    [SerializeField] TMP_Text percentageText = null;
     public Texture2D[] tattooDesigns;
     public Texture2D tattooDesign;
     private Texture2D finalData;
@@ -17,7 +18,6 @@ public class Save : MonoBehaviour
     public float incorrectPixels;
     public float coloredPixels;
     public Color targetColor;
-    [SerializeField] TMP_Text percentageText;
     public GameObject youWinText;
     public GameObject youLoseText;
     public GameObject tryAgainButton;
@@ -62,7 +62,7 @@ public class Save : MonoBehaviour
 
     private void DisplayResults(float percentValue, float roundedPercent)
     {
-        if (percentValue >= 80)
+        if (percentValue >= 85)
         {
             unlockable.UnlockPanel(designNumber);
             percentageText.enabled = true;
