@@ -12,6 +12,7 @@ public class MayoTrayUI : MonoBehaviour
     [SerializeField] Raycasting raycasting;
     bool trayIsOut;
     SceneHandler playable;
+    [SerializeField] GameObject trayButton;
 
     private void Awake()
     {
@@ -33,6 +34,7 @@ public class MayoTrayUI : MonoBehaviour
 
     public void PullOutTray()
     {
+        trayButton.SetActive(true);
         playable.playable = false;
         trayIsOut = true;
         ToggleRaycast(false);

@@ -5,23 +5,28 @@ using UnityEngine;
 
 public class Save : MonoBehaviour
 {
+    [SerializeField] PixelCounter pixelCounter;
+    [SerializeField] Unlockable unlockable;
 
     public Texture2D[] tattooDesigns;
     public Texture2D tattooDesign;
-
+    private Texture2D finalData;
     public RenderTexture tattooTexture;
     private float correctPixels;
     public float totalCorrectPixels;
     public float incorrectPixels;
+    public float coloredPixels;
+    public Color targetColor;
+    [SerializeField] TMP_Text percentageText;
     public GameObject youWinText;
     public GameObject youLoseText;
     public GameObject tryAgainButton;
-    public float coloredPixels;
-    public Color targetColor;
-    [SerializeField] PixelCounter pixelCounter;
-    Texture2D finalData;
-    [SerializeField] TMP_Text percentageText;
+    public int designNumber;
 
+    private void Awake()
+    {
+        SetDesignNumber(1);
+    }
     public void SaveTexture()
     {
         StartCoroutine(CoSave());
@@ -57,8 +62,9 @@ public class Save : MonoBehaviour
 
     private void DisplayResults(float percentValue, float roundedPercent)
     {
-        if (percentValue >= 70)
+        if (percentValue >= 80)
         {
+            unlockable.UnlockPanel(designNumber);
             percentageText.enabled = true;
             percentageText.text = $"Great Job! you got {roundedPercent}%";
             youLoseText.SetActive(false);
@@ -120,6 +126,11 @@ public class Save : MonoBehaviour
     public void Set2DTexture(int designNum)
     {
         tattooDesign = tattooDesigns[designNum];
+    }
+
+    public void SetDesignNumber(int designNumber)
+    {
+        this.designNumber = designNumber;
     }
 
 }

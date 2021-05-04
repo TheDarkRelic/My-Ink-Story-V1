@@ -5,7 +5,6 @@ using UnityEngine.UI;
 public class TattooDesignSelector : MonoBehaviour
 {
     [SerializeField] Save save;
-
     [SerializeField] Image tattooDisplayImage;
     [SerializeField] SpriteRenderer tattooDisplayPattern;
     private Sprite _tattooCompareImage;
@@ -53,5 +52,10 @@ public class TattooDesignSelector : MonoBehaviour
             isActive = false;
             designSelectionPanal.SetActive(false);
         }
+    }
+
+    public void SetPercentageComplete()
+    {
+
     }
 }
