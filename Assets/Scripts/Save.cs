@@ -20,8 +20,9 @@ public class Save : MonoBehaviour
     public Color targetColor;
     public GameObject youWinText;
     public GameObject youLoseText;
-    public GameObject tryAgainButton;
+    public GameObject tryAgainButton, mainMenuButton;
     public int designNumber;
+    [SerializeField] float passingAmount = 75;
 
     private void Awake()
     {
@@ -43,7 +44,7 @@ public class Save : MonoBehaviour
         playerTattooTexture.Apply();
 
         var data = playerTattooTexture.EncodeToPNG();
-        File.WriteAllBytes(Application.dataPath + "/saveImage.png", data);
+        Object.Destroy(playerTattooTexture);
 
         finalData = new Texture2D(tattooTexture.width, tattooTexture.height);
         finalData.LoadImage(data);
@@ -62,23 +63,27 @@ public class Save : MonoBehaviour
 
     private void DisplayResults(float percentValue, float roundedPercent)
     {
-        if (percentValue >= 85)
+        var difficulty = PlayerPrefs.GetInt("Difficulty");
+        if (difficulty == 0) { passingAmount = 75; }
+        else if (difficulty == 1) { passingAmount = 85; }
+        else if (difficulty == 2) { passingAmount = 95; }
+
+        if (percentValue >= passingAmount)
         {
             unlockable.UnlockPanel(designNumber);
-            percentageText.enabled = true;
             percentageText.text = $"Great Job! you got {roundedPercent}%";
             youLoseText.SetActive(false);
             youWinText.SetActive(true);
-            tryAgainButton.SetActive(true);
         }
         else
         {
-            percentageText.enabled = true;
             percentageText.text = $"OUch!  {roundedPercent}% ??? They aint coming back...";
             youWinText.SetActive(false);
             youLoseText.SetActive(true);
-            tryAgainButton.SetActive(true);
         }
+        mainMenuButton.SetActive(true);
+        tryAgainButton.SetActive(true);
+        percentageText.enabled = true;
     }
 
     private void CompareTexture(Texture2D first, Texture2D second)

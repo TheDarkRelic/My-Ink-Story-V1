@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraZoom : MonoBehaviour
 {
-    [SerializeField] Camera zoomCamera;
+    [SerializeField] Camera zoomCamera = null;
 
     private void Update()
     {

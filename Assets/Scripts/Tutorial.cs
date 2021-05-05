@@ -3,8 +3,8 @@ using UnityEngine;
 public class Tutorial : MonoBehaviour
 {
     [SerializeField] GameObject tutorialBox1 = null;
-    string complete;
     [SerializeField] MayoTrayUI mayoTray = null;
+    string complete;
 
     private void OnEnable()
     {
@@ -30,4 +30,13 @@ public class Tutorial : MonoBehaviour
         boxToClose.SetActive(false);
     }
 
+    public void ClietPainWarning(GameObject tutorialBox5)
+    {
+        string hasWarned = PlayerPrefs.GetString("HasWarned");
+        if (hasWarned != "Yes")
+        {
+            PlayerPrefs.SetString("HasWarned", "Yes");
+            tutorialBox5.SetActive(true);
+        }
+    }
 }

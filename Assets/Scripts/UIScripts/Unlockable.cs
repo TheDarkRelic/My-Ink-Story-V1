@@ -37,7 +37,5 @@ public class Unlockable : MonoBehaviour
         if (designNumber == selectedDesign)
         lockPanel.SetActive(false);
         PlayerPrefs.SetInt("DesignUnlocked",selectedDesign);
-        Debug.Log(PlayerPrefs.GetInt("DesignUnlocked"));
-        
     }
 }

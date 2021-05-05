@@ -29,7 +29,7 @@ public class MayoTrayUI : MonoBehaviour
         Cursor.visible = false;
         machine.enabled = true;
         trayCanvas.enabled = false;
-        transform.DOMoveY(trayIn.position.y, .5f);
+        if (transform != null) { transform.DOMoveY(trayIn.position.y, .5f); }
     }
 
     public void PullOutTray()
@@ -43,7 +43,7 @@ public class MayoTrayUI : MonoBehaviour
         machine.enabled = false;
         machineObject.transform.DOMove(machineIdol.position, .5f);
         Invoke(nameof(EnableCanvas), .5f);
-        transform.DOMoveY(trayOut.position.y, .5f);
+        if (transform != null) { transform.DOMoveY(trayOut.position.y, .5f); }
     }
 
     public void ToggleRaycast(bool isActive)

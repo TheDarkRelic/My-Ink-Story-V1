@@ -17,7 +17,7 @@ public class Machine : MonoBehaviour
         {
             playAudio = true;
             animator.SetBool("Running", true);
-            transform.DOMove(raycasting.hit.point, .2f);
+            if (transform != null) { transform.DOMove(raycasting.hit.point, .2f); }
 
             if (raycasting.hit.collider != null)
             {
@@ -27,7 +27,9 @@ public class Machine : MonoBehaviour
         else
         {
             playAudio = false;
-            transform.DOMove(raycasting.hit.point + (Vector3.up * raycasting.machineHieght) + (-Vector3.forward * 2), smoothing);
+            if (transform != null)
+            { transform.DOMove(raycasting.hit.point + (Vector3.up * raycasting.machineHieght) + (-Vector3.forward * 2), smoothing); }
+
             animator.SetBool("Running", false);
         }
 
