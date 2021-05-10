@@ -1,18 +1,29 @@
 using UnityEngine;
 using UnityEngine.UI;
-
+using TMPro;
+using DG.Tweening;
+using System.Collections;
 
 public class TattooDesignSelector : MonoBehaviour
 {
     [SerializeField] Save save = null;
+    [SerializeField] PixelCounter pixelCounter = null;
+    [SerializeField] SetPlayerName setPlayerName;
     [SerializeField] Image tattooDisplayImage = null;
     [SerializeField] SpriteRenderer tattooDisplayPattern = null;
-    private Sprite _tattooCompareImage;
-    [SerializeField] GameObject designSelectionPanal = null;
-    public bool isActive;
+    [SerializeField] GameObject designSelectionPanel = null;
     [SerializeField] Sprite defaultDisplay = null, defaultPattern = null, defaultCompare = null;
     [SerializeField] Texture2D defaultTexture = null;
-    [SerializeField] PixelCounter pixelCounter = null;
+    [SerializeField] TMP_Text titleText;
+    [SerializeField] Color blendColor1, blendColor2;
+    [SerializeField] GameObject namePanel;
+    private Sprite _tattooCompareImage;
+    public bool isActive;
+
+    private void Awake()
+    {
+        setPlayerName.CheckForSavedName(namePanel);
+    }
 
     private void Start()
     {
@@ -45,17 +56,12 @@ public class TattooDesignSelector : MonoBehaviour
         if (!isActive)
         {
             isActive = true;
-            designSelectionPanal.SetActive(true);
+            designSelectionPanel.SetActive(true);
         }
         else if (isActive)
         {
             isActive = false;
-            designSelectionPanal.SetActive(false);
+            designSelectionPanel.SetActive(false);
         }
-    }
-
-    public void SetPercentageComplete()
-    {
-
     }
 }

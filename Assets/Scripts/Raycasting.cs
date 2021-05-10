@@ -2,12 +2,15 @@ using UnityEngine;
 public class Raycasting : MonoBehaviour
 {
     [SerializeField] Transform machine = null;
-    public RaycastHit hit;
-    public  LayerMask layerMask;
-    public float machineHieght = 1;
     [SerializeField] Transform idolPos = null;
+    [SerializeField] Machine machineScript = null;
+    [SerializeField] MachineCrosshair machineCrosshair = null;
+    [SerializeField] AudioSource machineAudio;
+    public float machineHieght = 1;
+    public  LayerMask layerMask;
+    public RaycastHit hit;
     public Ray ray;
-
+    
     private void OnEnable()
     {
         Cursor.visible = true;
@@ -20,12 +23,20 @@ public class Raycasting : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, 100, layerMask))
         {
+            SceneHandler.Instance.playable = true;
+            machineCrosshair.ToggleCursor(true);
+            machineScript.enabled = true;
             Cursor.visible = false;
         }
         else
         {
+            machineAudio.enabled = false;
+            machineScript.animator.SetBool("Running", false);
+            SceneHandler.Instance.playable = false;
+            machineCrosshair.ToggleCursor(false);
+            machineScript.enabled = false;
             Cursor.visible = true;
-            machine.position = new Vector3(7, 0, -5);
+            machine.position = idolPos.position;
             machine.rotation = idolPos.rotation;
         }
     }

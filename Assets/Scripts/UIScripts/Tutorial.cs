@@ -5,6 +5,12 @@ public class Tutorial : MonoBehaviour
     [SerializeField] GameObject tutorialBox1 = null;
     [SerializeField] MayoTrayUI mayoTray = null;
     string complete;
+    Raycasting raycasting;
+
+    private void Awake()
+    {
+        raycasting = FindObjectOfType<Raycasting>();
+    }
 
     private void OnEnable()
     {
@@ -30,13 +36,25 @@ public class Tutorial : MonoBehaviour
         boxToClose.SetActive(false);
     }
 
-    public void ClietPainWarning(GameObject tutorialBox5)
+    public void ClietPainWarning(GameObject tutorialBox4)
     {
         string hasWarned = PlayerPrefs.GetString("HasWarned");
         if (hasWarned != "Yes")
         {
+            ToggleCursor(true);
+            ToggleRaycast(false);
             PlayerPrefs.SetString("HasWarned", "Yes");
-            tutorialBox5.SetActive(true);
+            tutorialBox4.SetActive(true);
         }
+    }
+
+    public void ToggleRaycast(bool isRaycasting)
+    {
+        raycasting.enabled = isRaycasting;
+    }
+
+    public void ToggleCursor(bool isVisible)
+    {
+        Cursor.visible = isVisible;
     }
 }

@@ -3,12 +3,11 @@ using DG.Tweening;
 
 public class Machine : MonoBehaviour
 {
-    [SerializeField] Animator animator = null;
+    public Animator animator = null;
     [SerializeField] Raycasting raycasting = null;
-    [SerializeField] MachineVibrate vibrate = null;
     [SerializeField] float smoothing = .2f;
     [SerializeField] AudioSource audioSource = null;
-    private bool playAudio;
+    bool playAudio;
 
     private void Update()
     {
@@ -18,11 +17,6 @@ public class Machine : MonoBehaviour
             playAudio = true;
             animator.SetBool("Running", true);
             if (transform != null) { transform.DOMove(raycasting.hit.point, .2f); }
-
-            if (raycasting.hit.collider != null)
-            {
-                if (!vibrate.vibrating) { vibrate.StartCoroutine("MachineVibrating"); }
-            }
         }
         else
         {
@@ -42,5 +36,4 @@ public class Machine : MonoBehaviour
         if (playAudio) { audioSource.enabled = true; }
         else { audioSource.enabled = false; }
     }
-
 }

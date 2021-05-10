@@ -1,5 +1,4 @@
 using System.Collections;
-using System.IO;
 using TMPro;
 using UnityEngine;
 
@@ -7,6 +6,7 @@ public class Save : MonoBehaviour
 {
     [SerializeField] PixelCounter pixelCounter = null;
     [SerializeField] Unlockable unlockable = null;
+    [SerializeField] DiscordWebhook discord = null;
 
     [SerializeField] TMP_Text percentageText = null;
     public Texture2D[] tattooDesigns;
@@ -23,9 +23,16 @@ public class Save : MonoBehaviour
     public GameObject tryAgainButton, mainMenuButton;
     public int designNumber;
     [SerializeField] float passingAmount = 75;
+    public byte[] data;
+    public string playerName;
+    float roundedPercent;
 
     private void Awake()
     {
+        var getPlayerName = PlayerPrefs.GetString("PlayerName");
+        if (getPlayerName != null) { playerName = getPlayerName; }
+        
+
         SetDesignNumber(1);
     }
     public void SaveTexture()
@@ -43,21 +50,24 @@ public class Save : MonoBehaviour
         playerTattooTexture.ReadPixels(new Rect(0, 0, tattooTexture.width, tattooTexture.height), 0, 0);
         playerTattooTexture.Apply();
 
-        var data = playerTattooTexture.EncodeToPNG();
+        data = playerTattooTexture.EncodeToPNG();
         Object.Destroy(playerTattooTexture);
 
         finalData = new Texture2D(tattooTexture.width, tattooTexture.height);
         finalData.LoadImage(data);
 
         CompareTextures();
+        var difficulty = SceneHandler.Instance.difficultySetting;
+        discord.SendDiscordMessage( playerName, data, roundedPercent, difficulty);
     }
 
     private void CompareTextures()
     {
         CompareTexture(finalData, tattooDesign);
         var percentValue = (totalCorrectPixels / pixelCounter.totalPixels) * 100;
-        float roundedPercent = percentValue;
+        roundedPercent = percentValue;
         roundedPercent = Mathf.Round(roundedPercent * 10.0f) * 0.1f;
+        if (roundedPercent < 0 ) { roundedPercent = 0; }
         DisplayResults(percentValue, roundedPercent);
     }
 
@@ -65,8 +75,8 @@ public class Save : MonoBehaviour
     {
         var difficulty = PlayerPrefs.GetInt("Difficulty");
         if (difficulty == 0) { passingAmount = 75; }
-        else if (difficulty == 1) { passingAmount = 85; }
-        else if (difficulty == 2) { passingAmount = 95; }
+        else if (difficulty == 1) { passingAmount = 88; }
+        else if (difficulty == 2) { passingAmount = 96; }
 
         if (percentValue >= passingAmount)
         {

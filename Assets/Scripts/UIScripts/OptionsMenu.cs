@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
@@ -62,7 +60,7 @@ public class OptionsMenu : MonoBehaviour
         }
     }
 
-    public void ResetLocks()
+    public void ResetPrefs()
     {
         PlayerPrefs.DeleteKey("DesignUnlocked");
         PlayerPrefs.DeleteKey("Complete");

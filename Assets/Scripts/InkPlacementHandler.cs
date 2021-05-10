@@ -3,9 +3,11 @@ using UnityEngine;
 public class InkPlacementHandler : MonoBehaviour
 {
     [SerializeField] GameObject inkLinePreFab = null;
-    [SerializeField] Raycasting raycasting = null;
     private InkLine  activeInkLine;
+    [SerializeField] Transform lineParent;
     private Vector3 hitPoint;
+    [SerializeField] Raycasting raycasting = null;
+    [SerializeField] Machine machineScript = null;
 
     void Update()
     {
@@ -14,14 +16,16 @@ public class InkPlacementHandler : MonoBehaviour
         if (playable && Input.GetMouseButtonDown(0) && Physics.Raycast(raycasting.ray, out raycasting.hit, 100, raycasting.layerMask))
         {
             GameObject inkLineGameObject = Instantiate(inkLinePreFab, raycasting.hit.point, Quaternion.identity);
+            inkLineGameObject.transform.parent = lineParent;
             activeInkLine = inkLineGameObject.GetComponent<InkLine>();
         }
 
         if (playable && Input.GetMouseButtonUp(0))
         {
-            if (activeInkLine != null) { activeInkLine.AddPoint(hitPoint); }
-            activeInkLine = null;
+            FinishLineRender();
         }
+
+        if (machineScript.enabled == false) { FinishLineRender(); }
 
         if (activeInkLine != null)
         {
@@ -31,5 +35,10 @@ public class InkPlacementHandler : MonoBehaviour
         
     }
 
-    
+    private void FinishLineRender()
+    {
+        if (activeInkLine != null) { activeInkLine.AddPoint(hitPoint); }
+        activeInkLine = null;
+    }
+
 }

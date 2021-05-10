@@ -6,7 +6,7 @@ public class SceneHandler : MonoBehaviour
 {
     public bool playable;
     private static SceneHandler instance;
-
+    public string difficultySetting;
     public static SceneHandler Instance
     {
         get
@@ -49,5 +49,10 @@ public class SceneHandler : MonoBehaviour
     {
         if (playable) { playable = false; }
         else { playable = true; }
+    }
+
+    public void SetDifficultyString(string difficulty)
+    {
+        difficultySetting = difficulty;
     }
 }

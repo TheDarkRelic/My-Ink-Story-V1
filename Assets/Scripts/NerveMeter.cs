@@ -10,9 +10,6 @@ public class NerveMeter : MonoBehaviour
     [SerializeField] float nerveLevel, minNerveLevel = 0, nerveDecreaseSpeed = 1;
     public float maxNerveLevel;
 
-    [SerializeField] MachineVibrate machineVibrate = null;
-
-
     private void Awake()
     {
         SetMaxNerveLevel();
@@ -33,7 +30,6 @@ public class NerveMeter : MonoBehaviour
         }
         else
         {
-            machineVibrate.shaking = false;
             nerveLevel -= Time.deltaTime * nerveDecreaseSpeed;
             if (nerveLevel <= 0) { nerveLevel = minNerveLevel; }
         }

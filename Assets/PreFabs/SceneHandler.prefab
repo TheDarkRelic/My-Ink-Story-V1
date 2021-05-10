@@ -43,3 +43,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 369ed067867a050429deb6a55e2f8c1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playable: 0
+  difficultySelector: {fileID: 2230597480124159148, guid: 8e0fda02cb47a574d9ebea9efc7f8c6c, type: 3}
