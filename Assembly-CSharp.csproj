@@ -64,6 +64,7 @@
     <Compile Include="Assets\Scripts\FadePanel.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
     <Compile Include="Assets\Scripts\UIScripts\TattooDesign.cs" />
+    <Compile Include="Assets\Scripts\UIScripts\Main Menu Scripts\SetPlayerName.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
     <Compile Include="Assets\Scripts\MachineCrosshair.cs" />
     <Compile Include="Assets\Scripts\MayoTrayUI.cs" />
@@ -84,6 +85,7 @@
     <Compile Include="Assets\Scripts\PixelCounter.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
+    <Compile Include="Assets\Scripts\UIScripts\Main Menu Scripts\Continue.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
     <Compile Include="Assets\Scripts\UIScripts\Unlockable.cs" />
@@ -117,8 +119,7 @@
     <Compile Include="Assets\Scripts\Save.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
-    <Compile Include="Assets\Scripts\UIScripts\Main Menu Scripts\SetPlayerName.cs" />
-    <Compile Include="Assets\Scripts\UIScripts\Main Menu Scripts\Continue.cs" />
+    <Compile Include="Assets\Scripts\UIScripts\RefererenceImageHolder.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -11,12 +11,9 @@ public class TattooDesignSelector : MonoBehaviour
     [SerializeField] SetPlayerName setPlayerName;
     [SerializeField] Image tattooDisplayImage = null;
     [SerializeField] SpriteRenderer tattooDisplayPattern = null;
-    [SerializeField] GameObject designSelectionPanel = null;
+    [SerializeField] GameObject designSelectionPanel = null, namePanel = null;
     [SerializeField] Sprite defaultDisplay = null, defaultPattern = null, defaultCompare = null;
     [SerializeField] Texture2D defaultTexture = null;
-    [SerializeField] TMP_Text titleText;
-    [SerializeField] Color blendColor1, blendColor2;
-    [SerializeField] GameObject namePanel;
     private Sprite _tattooCompareImage;
     public bool isActive;
 
