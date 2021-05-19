@@ -1,10 +1,12 @@
 using UnityEngine;
+using DG.Tweening;
 public class Raycasting : MonoBehaviour
 {
     [SerializeField] Transform machine = null;
     [SerializeField] Transform idolPos = null;
     [SerializeField] Machine machineScript = null;
     [SerializeField] MachineCrosshair machineCrosshair = null;
+    [SerializeField] TweenPosition tweenPosition = null;
     [SerializeField] AudioSource machineAudio;
     public float machineHieght = 1;
     public  LayerMask layerMask;
@@ -27,6 +29,7 @@ public class Raycasting : MonoBehaviour
             machineCrosshair.ToggleCursor(true);
             machineScript.enabled = true;
             Cursor.visible = false;
+            tweenPosition.TweenPositionToA();
         }
         else
         {
@@ -36,8 +39,9 @@ public class Raycasting : MonoBehaviour
             machineCrosshair.ToggleCursor(false);
             machineScript.enabled = false;
             Cursor.visible = true;
-            machine.position = idolPos.position;
+            machine.DOMove(idolPos.position, .35f);
             machine.rotation = idolPos.rotation;
+            tweenPosition.TweenPositionToB();
         }
     }
 }

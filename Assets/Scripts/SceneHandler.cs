@@ -6,7 +6,7 @@ public class SceneHandler : MonoBehaviour
 {
     public bool playable;
     private static SceneHandler instance;
-    public string difficultySetting;
+    public string difficultySetting = "Apprentice";
     public static SceneHandler Instance
     {
         get

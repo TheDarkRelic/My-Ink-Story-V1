@@ -13,6 +13,10 @@ public class DifficultySelector : MonoBehaviour
     string difficultySetting;
     [SerializeField] TMP_Dropdown dropdown = null;
 
+    private void Awake()
+    {
+        SelectDifficulty(PlayerPrefs.GetInt("Difficulty"));
+    }
     private void OnEnable()
     {
         var currentDifficuly = PlayerPrefs.GetInt("Difficulty");

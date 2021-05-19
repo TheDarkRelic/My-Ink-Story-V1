@@ -14,6 +14,7 @@ public class MayoTrayUI : MonoBehaviour
     SceneHandler playable;
     [SerializeField] GameObject trayButton = null;
 
+
     private void Awake()
     {
         trayIsOut = false;

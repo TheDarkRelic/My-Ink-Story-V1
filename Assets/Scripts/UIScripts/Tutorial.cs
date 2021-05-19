@@ -1,11 +1,13 @@
+using TMPro;
 using UnityEngine;
 
 public class Tutorial : MonoBehaviour
 {
     [SerializeField] GameObject tutorialBox1 = null;
     [SerializeField] MayoTrayUI mayoTray = null;
+    [SerializeField] TMP_Text playerName = null;
     string complete;
-    Raycasting raycasting;
+    Raycasting raycasting = null;
 
     private void Awake()
     {
@@ -14,6 +16,7 @@ public class Tutorial : MonoBehaviour
 
     private void OnEnable()
     {
+        playerName.text = $"Hello {PlayerPrefs.GetString("PlayerName")},";
         complete = PlayerPrefs.GetString("Complete");
         if (complete == "Yes") { CloseTutorialBox(tutorialBox1); }
         else { OpenTutorialBox(tutorialBox1); }

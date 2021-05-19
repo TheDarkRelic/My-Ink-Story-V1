@@ -20,7 +20,7 @@ public class Save : MonoBehaviour
     public Color targetColor;
     public GameObject youWinText;
     public GameObject youLoseText;
-    public GameObject tryAgainButton, mainMenuButton;
+    public GameObject tryAgainButton, continueButton, mainMenuButton;
     public int designNumber;
     [SerializeField] float passingAmount = 75;
     public byte[] data;
@@ -74,9 +74,9 @@ public class Save : MonoBehaviour
     private void DisplayResults(float percentValue, float roundedPercent)
     {
         var difficulty = PlayerPrefs.GetInt("Difficulty");
-        if (difficulty == 0) { passingAmount = 75; }
-        else if (difficulty == 1) { passingAmount = 88; }
-        else if (difficulty == 2) { passingAmount = 96; }
+        if (difficulty == 0) { passingAmount = 40; }
+        else if (difficulty == 1) { passingAmount = 60; }
+        else if (difficulty == 2) { passingAmount = 85; }
 
         if (percentValue >= passingAmount)
         {
@@ -84,15 +84,16 @@ public class Save : MonoBehaviour
             percentageText.text = $"Great Job! you got {roundedPercent}%";
             youLoseText.SetActive(false);
             youWinText.SetActive(true);
+            continueButton.SetActive(true);
         }
         else
         {
             percentageText.text = $"OUch!  {roundedPercent}% ??? They aint coming back...";
             youWinText.SetActive(false);
             youLoseText.SetActive(true);
+            tryAgainButton.SetActive(true);
         }
         mainMenuButton.SetActive(true);
-        tryAgainButton.SetActive(true);
         percentageText.enabled = true;
     }
 
