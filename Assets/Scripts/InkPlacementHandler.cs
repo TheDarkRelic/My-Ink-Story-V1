@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class InkPlacementHandler : MonoBehaviour
 {
@@ -13,14 +14,14 @@ public class InkPlacementHandler : MonoBehaviour
     {
         bool playable = SceneHandler.Instance.playable;
 
-        if (playable && Input.GetMouseButtonDown(0) && Physics.Raycast(raycasting.ray, out raycasting.hit, 100, raycasting.layerMask))
+        if (playable && Mouse.current.leftButton.wasPressedThisFrame && Physics.Raycast(raycasting.ray, out raycasting.hit, 100, raycasting.layerMask))
         {
             GameObject inkLineGameObject = Instantiate(inkLinePreFab, raycasting.hit.point, Quaternion.identity);
             inkLineGameObject.transform.parent = lineParent;
             activeInkLine = inkLineGameObject.GetComponent<InkLine>();
         }
 
-        if (playable && Input.GetMouseButtonUp(0))
+        if (playable && Mouse.current.leftButton.wasReleasedThisFrame)
         {
             FinishLineRender();
         }

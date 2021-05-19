@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.InputSystem;
 
 public class NerveMeter : MonoBehaviour
 {
@@ -18,7 +19,7 @@ public class NerveMeter : MonoBehaviour
     void Update()
     {
         
-        if (SceneHandler.Instance.playable && Input.GetMouseButton(0))
+        if (SceneHandler.Instance.playable && Mouse.current.leftButton.isPressed)
         {
             nerveLevel += Time.deltaTime;
             if (nerveLevel > maxNerveLevel)

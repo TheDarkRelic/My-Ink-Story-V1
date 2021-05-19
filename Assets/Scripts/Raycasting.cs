@@ -1,5 +1,6 @@
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.InputSystem;
 public class Raycasting : MonoBehaviour
 {
     [SerializeField] Transform machine = null;
@@ -21,7 +22,7 @@ public class Raycasting : MonoBehaviour
     void FixedUpdate()
     {
 
-        ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
 
         if (Physics.Raycast(ray, out hit, 100, layerMask))
         {

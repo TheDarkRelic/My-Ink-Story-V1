@@ -1,5 +1,6 @@
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.InputSystem;
 
 public class Machine : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class Machine : MonoBehaviour
     private void Update()
     {
 
-        if (Input.GetMouseButton(0) && Physics.Raycast(raycasting.ray, out raycasting.hit, 100, raycasting.layerMask) && transform != null && SceneHandler.Instance.playable)
+        if (Mouse.current.leftButton.isPressed && Physics.Raycast(raycasting.ray, out raycasting.hit, 100, raycasting.layerMask) && transform != null && SceneHandler.Instance.playable)
         {
             playAudio = true;
             animator.SetBool("Running", true);
