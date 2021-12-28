@@ -7,12 +7,6 @@ public class Tutorial : MonoBehaviour
     [SerializeField] MayoTrayUI mayoTray = null;
     [SerializeField] TMP_Text playerName = null;
     string complete;
-    Raycasting raycasting = null;
-
-    private void Awake()
-    {
-        raycasting = FindObjectOfType<Raycasting>();
-    }
 
     private void OnEnable()
     {
@@ -45,15 +39,9 @@ public class Tutorial : MonoBehaviour
         if (hasWarned != "Yes")
         {
             ToggleCursor(true);
-            ToggleRaycast(false);
             PlayerPrefs.SetString("HasWarned", "Yes");
             tutorialBox4.SetActive(true);
         }
-    }
-
-    public void ToggleRaycast(bool isRaycasting)
-    {
-        raycasting.enabled = isRaycasting;
     }
 
     public void ToggleCursor(bool isVisible)

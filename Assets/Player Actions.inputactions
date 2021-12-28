@@ -17,7 +17,15 @@
                     "name": "Movement",
                     "type": "Value",
                     "id": "e55f1548-c45a-4563-baf6-f7d15f4c0f00",
-                    "expectedControlType": "Vector2",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Tray",
+                    "type": "Button",
+                    "id": "e6c79f63-bff8-4342-93e3-e7cdc8fe3910",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
                 }
@@ -25,19 +33,19 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "402fde9c-56ca-42b5-be31-7077e7b713bd",
-                    "path": "<Mouse>/rightButton",
+                    "id": "5c6b214f-cea3-42f9-8044-603ea5fb7499",
+                    "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Controller",
                     "action": "RunMachine",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "WASD Keys",
-                    "id": "26ddf01b-731d-4f26-851c-408a320edfb0",
-                    "path": "2DVector",
+                    "name": "2D Vector",
+                    "id": "ce7be304-a101-48cd-a201-e2c195c85d27",
+                    "path": "2DVector(mode=2)",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -47,50 +55,100 @@
                 },
                 {
                     "name": "up",
-                    "id": "0f6d331c-6bb3-4349-b1a4-40adb81c1fcf",
-                    "path": "<Keyboard>/w",
+                    "id": "b6a8e09a-8b04-49af-a091-1f800cf873ce",
+                    "path": "<Gamepad>/leftStick/up",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Controller",
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
                 {
                     "name": "down",
-                    "id": "be6bee2f-8c5b-4124-9c00-59f42d0d1666",
-                    "path": "<Keyboard>/s",
+                    "id": "72d83631-00c0-4cb2-b55d-a40e8c4aaf5f",
+                    "path": "<Gamepad>/leftStick/down",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Controller",
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
                 {
                     "name": "left",
-                    "id": "893fc052-0534-4a1b-8cf7-1f7e89057614",
-                    "path": "<Keyboard>/a",
+                    "id": "2d0802fd-8b46-4528-bf84-656e427d7414",
+                    "path": "<Gamepad>/leftStick/left",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Controller",
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
                 {
                     "name": "right",
-                    "id": "81cc2a36-7fed-484e-ba86-a041e6b91667",
-                    "path": "<Keyboard>/d",
+                    "id": "84048b5b-8f7d-49ae-a842-d785bb759631",
+                    "path": "<Gamepad>/leftStick/right",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Controller",
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "987b7ea7-aa86-4e06-9497-7c777a40b7e4",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Controller",
+                    "action": "Tray",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "MenuControls",
+            "id": "843c2d60-f017-4f06-a9eb-a36c2489bf22",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "d66dcf1b-cff5-45c1-9edb-59d58b7e18d6",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "6b9657cd-0b0d-4310-abb6-46f1ccdf1747",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Controller",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }
     ],
-    "controlSchemes": []
+    "controlSchemes": [
+        {
+            "name": "Controller",
+            "bindingGroup": "Controller",
+            "devices": [
+                {
+                    "devicePath": "<Joystick>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
 }

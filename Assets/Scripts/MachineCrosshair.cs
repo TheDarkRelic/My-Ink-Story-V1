@@ -2,13 +2,12 @@ using UnityEngine;
 
 public class MachineCrosshair : MonoBehaviour
 {
-    [SerializeField] Raycasting raycasting = null;
     [SerializeField] float crosshairYOffset = -0.8f;
+    [SerializeField] Machine machine = null;
 
     void Update()
     {
-        var pos = raycasting.hit.point;
-        transform.position = new Vector3(pos.x, pos.y, crosshairYOffset);
+        transform.position = machine.transform.position;
     }
 
     public void ToggleCursor(bool isActive)

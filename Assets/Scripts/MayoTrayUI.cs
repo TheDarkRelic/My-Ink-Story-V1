@@ -13,19 +13,19 @@ public class MayoTrayUI : MonoBehaviour
     bool trayIsOut;
     SceneHandler playable;
     [SerializeField] GameObject trayButton = null;
-
+    PlayerActions _actions;
 
     private void Awake()
     {
+        _actions = new PlayerActions();
+        _actions.TattooControls.Tray.performed += cntxt => ToggleTray();
         trayIsOut = false;
         playable = SceneHandler.Instance;
     }
 
     public void PutAwayTray()
     {
-        playable.playable = true;
         trayIsOut = false;
-        ToggleRaycast(true);
         machineCrosshair.ToggleCursor(true);
         Cursor.visible = false;
         machine.enabled = true;
@@ -36,20 +36,13 @@ public class MayoTrayUI : MonoBehaviour
     public void PullOutTray()
     {
         trayButton.SetActive(true);
-        playable.playable = false;
         trayIsOut = true;
-        ToggleRaycast(false);
         machineCrosshair.ToggleCursor(false);
         Cursor.visible = true;
         machine.enabled = false;
         machineObject.transform.DOMove(machineIdol.position, .5f);
         Invoke(nameof(EnableCanvas), .5f);
         if (transform != null) { transform.DOMoveY(trayOut.position.y, .5f); }
-    }
-
-    public void ToggleRaycast(bool isActive)
-    {
-        raycasting.enabled = isActive;
     }
 
     public void ToggleTray()
@@ -61,5 +54,15 @@ public class MayoTrayUI : MonoBehaviour
     void EnableCanvas()
     {
         trayCanvas.enabled = true;
+    }
+
+    private void OnEnable()
+    {
+        _actions.TattooControls.Enable();
+    }
+
+    private void OnDisable()
+    {
+        _actions.TattooControls.Disable();
     }
 }

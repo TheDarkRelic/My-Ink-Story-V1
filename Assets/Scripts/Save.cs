@@ -58,7 +58,7 @@ public class Save : MonoBehaviour
 
         CompareTextures();
         var difficulty = SceneHandler.Instance.difficultySetting;
-        discord.SendDiscordMessage( playerName, data, roundedPercent, difficulty);
+        //discord.SendDiscordMessage( playerName, data, roundedPercent, difficulty);
     }
 
     private void CompareTextures()

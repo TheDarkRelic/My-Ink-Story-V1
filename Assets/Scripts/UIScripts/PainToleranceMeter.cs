@@ -13,22 +13,17 @@ public class PainToleranceMeter : MonoBehaviour
 
     void Update()
     {
-        bool playable = SceneHandler.Instance.playable;
-        if (playable)
+        ClampMaxPain();
+        var nerveLevel = nerveMeter.GetNerveLevel();
+        if (nerveLevel >= nerveMeter.maxNerveLevel) { IncreaseFillAmount(); }
+        GetCurrentpainLevel();
+        if (currentPain >= maxPain)
         {
-            ClampMaxPain();
-            var nerveLevel = nerveMeter.GetNerveLevel();
-            if (nerveLevel >= nerveMeter.maxNerveLevel) { IncreaseFillAmount(); }
+            painUI.ActivateClientConditionPanel();
+            currentPain = 0;
             GetCurrentpainLevel();
-            if (currentPain >= maxPain)
-            {
-                painUI.ActivateClientConditionPanel();
-                currentPain = 0;
-                GetCurrentpainLevel();
-
-            }
         }
-        
+
     }
 
     void GetCurrentpainLevel()

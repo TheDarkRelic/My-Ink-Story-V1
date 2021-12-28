@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -7,33 +8,42 @@ public class InkPlacementHandler : MonoBehaviour
     private InkLine  activeInkLine;
     [SerializeField] Transform lineParent;
     private Vector3 hitPoint;
-    [SerializeField] Raycasting raycasting = null;
     [SerializeField] Machine machineScript = null;
+    [SerializeField] JoystickControls joystick = null;
+    PlayerActions _actions = null;
+    bool pressed;
 
-    void Update()
+    private void Awake()
     {
-        bool playable = SceneHandler.Instance.playable;
+        _actions = new PlayerActions();
+        _actions.TattooControls.RunMachine.started += cntxt => MachineFlip(cntxt);
+    }
 
-        if (playable && Mouse.current.leftButton.wasPressedThisFrame && Physics.Raycast(raycasting.ray, out raycasting.hit, 100, raycasting.layerMask))
-        {
-            GameObject inkLineGameObject = Instantiate(inkLinePreFab, raycasting.hit.point, Quaternion.identity);
-            inkLineGameObject.transform.parent = lineParent;
-            activeInkLine = inkLineGameObject.GetComponent<InkLine>();
-        }
 
-        if (playable && Mouse.current.leftButton.wasReleasedThisFrame)
-        {
-            FinishLineRender();
-        }
+    private void Update()
+    {
+        if (pressed) { PlaceLine(); }
+    }
+
+    private void MachineFlip(InputAction.CallbackContext cntxt)
+    {
+        pressed = cntxt.ReadValueAsButton();
+    }
+    private void PlaceLine()
+    {
+        GameObject inkLineGameObject = Instantiate(inkLinePreFab, joystick.hit.point, Quaternion.identity);
+        inkLineGameObject.transform.parent = lineParent;
+        activeInkLine = inkLineGameObject.GetComponent<InkLine>();
 
         if (machineScript.enabled == false) { FinishLineRender(); }
 
+        if (!pressed) { FinishLineRender(); }
+
         if (activeInkLine != null)
         {
-            hitPoint = raycasting.hit.point;
+            hitPoint = joystick.hit.point;
             activeInkLine.UpdateLine(hitPoint);
         }
-        
     }
 
     private void FinishLineRender()
@@ -42,4 +52,13 @@ public class InkPlacementHandler : MonoBehaviour
         activeInkLine = null;
     }
 
+    private void OnEnable()
+    {
+        _actions.TattooControls.Enable();
+    }
+
+    private void OnDisable()
+    {
+        _actions.TattooControls.Disable();
+    }
 }

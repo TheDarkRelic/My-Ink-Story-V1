@@ -10,24 +10,24 @@ public class NerveMeter : MonoBehaviour
     [SerializeField] Gradient barColorGradient = null;
     [SerializeField] float nerveLevel, minNerveLevel = 0, nerveDecreaseSpeed = 1;
     public float maxNerveLevel;
+    PlayerActions _actions;
 
     private void Awake()
     {
         SetMaxNerveLevel();
+        _actions = new PlayerActions();
     }
 
     void Update()
     {
-        
-        if (SceneHandler.Instance.playable && Mouse.current.leftButton.isPressed)
+
+        if (_actions.TattooControls.RunMachine.ReadValue<bool>())
         {
             nerveLevel += Time.deltaTime;
             if (nerveLevel > maxNerveLevel)
             {
                 nerveLevel = maxNerveLevel;
             }
-            
-            
         }
         else
         {

@@ -4,7 +4,6 @@ using System.Collections;
 
 public class SceneHandler : MonoBehaviour
 {
-    public bool playable;
     private static SceneHandler instance;
     public string difficultySetting = "Apprentice";
     public static SceneHandler Instance
@@ -37,7 +36,6 @@ public class SceneHandler : MonoBehaviour
             Destroy(gameObject);
         }
 
-        playable = false;
     }
 
     public void LoadScene(int scene)
@@ -45,11 +43,6 @@ public class SceneHandler : MonoBehaviour
         SceneManager.LoadScene(scene);
     }
 
-    public void TogglePlayable()
-    {
-        if (playable) { playable = false; }
-        else { playable = true; }
-    }
 
     public void SetDifficultyString(string difficulty)
     {

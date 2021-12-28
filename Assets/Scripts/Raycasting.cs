@@ -9,6 +9,7 @@ public class Raycasting : MonoBehaviour
     [SerializeField] MachineCrosshair machineCrosshair = null;
     [SerializeField] TweenPosition tweenPosition = null;
     [SerializeField] AudioSource machineAudio;
+    [SerializeField] JoystickControls joystick = null;
     public float machineHieght = 1;
     public  LayerMask layerMask;
     public RaycastHit hit;
@@ -26,7 +27,6 @@ public class Raycasting : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, 100, layerMask))
         {
-            SceneHandler.Instance.playable = true;
             machineCrosshair.ToggleCursor(true);
             machineScript.enabled = true;
             Cursor.visible = false;
@@ -36,7 +36,6 @@ public class Raycasting : MonoBehaviour
         {
             machineAudio.enabled = false;
             machineScript.animator.SetBool("Running", false);
-            SceneHandler.Instance.playable = false;
             machineCrosshair.ToggleCursor(false);
             machineScript.enabled = false;
             Cursor.visible = true;
